@@ -1,0 +1,9 @@
+{
+    "name": "my-project",
+    "version": "0.0.1",
+    "author": "developer",
+    "private": false,
+    "dependencies": {
+        "chalk": "^4.1.0"
+    }
+}
