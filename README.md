@@ -1,5 +1,5 @@
 ###cli-template 
 
 ```
-vue
+vue-plugin
 ```
