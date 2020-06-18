@@ -2,7 +2,7 @@ import axios from 'axios'
 import store from '@/store'
 import fingerprint from 'fingerprintjs2'
 import defaultOptions from './options'
-import {Message, MessageBox} from 'element-ui'
+import {Message} from 'element-ui'
 
 //浏览器指纹识别
 if (window.requestIdleCallback) {

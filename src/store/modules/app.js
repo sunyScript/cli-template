@@ -1,4 +1,4 @@
-export default app = {
+const app = {
 	state: {
 		token: ''
 	},
@@ -7,8 +7,7 @@ export default app = {
 			state.token = token
 		}
 	},
-	actions: {
-
-	}
+	actions: {}
 
 }
+export default app

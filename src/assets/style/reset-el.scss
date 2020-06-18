@@ -1,0 +1,23 @@
+el-input .el-input__inner {
+  padding: 0 8px;
+}
+
+.el-textarea .el-textarea__inner {
+  padding: 5px 8px;
+}
+
+.el-radio .el-radio__label {
+  padding-left: 8px;
+}
+
+.el-checkbox .el-checkbox__label {
+  padding-left: 8px;
+}
+
+body .el-table th.gutter {
+  display: table-cell !important;
+}
+
+body .el-table colgroup.gutter {
+  display: table-cell !important;
+}

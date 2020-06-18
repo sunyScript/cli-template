@@ -63,7 +63,7 @@ module.exports = {
 	},
 	configureWebpack: config => {
 		config.resolve.alias['@'] = resolve('src')
-		config.resolve.alias['@c'] = resolve('./src/components')
+		config.resolve.alias['@C'] = resolve('./src/components')
 		config.plugins.push(
 			new webpack.ProvidePlugin({
 				jQuery: 'jquery',
