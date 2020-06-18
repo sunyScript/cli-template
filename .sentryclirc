@@ -1,0 +1,7 @@
+[auth]
+token =
+
+[defaults]
+url = https://sentry.lobomeeting.com
+org = sentry
+project =

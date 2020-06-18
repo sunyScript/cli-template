@@ -1,39 +1,53 @@
 {
-  "name": "project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-router": "~4.4.0",
-    "@vue/cli-plugin-vuex": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+    "name": "project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "@sentry/browser": "^5.15.4",
+        "@sentry/integrations": "^5.15.4",
+        "axios": "^0.18.1",
+        "core-js": "^3.6.5",
+        "element-ui": "^2.13.2",
+        "fingerprintjs2": "^2.1.0",
+        "jquery": "^3.4.1",
+        "qs": "^6.5.2",
+        "vue": "^2.6.11",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@sentry/webpack-plugin": "^1.10.0",
+        "@vue/cli-plugin-babel": "~4.4.0",
+        "@vue/cli-plugin-eslint": "~4.4.0",
+        "@vue/cli-plugin-router": "~4.4.0",
+        "@vue/cli-plugin-vuex": "~4.4.0",
+        "@vue/cli-service": "~4.4.0",
+        "babel-eslint": "^10.1.0",
+        "case-sensitive-paths-webpack-plugin": "^2.3.0",
+        "compression-webpack-plugin": "^3.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "font-awesome": "^4.7.0",
+        "git-revision-webpack-plugin": "^3.0.4",
+        "html-webpack-plugin": "3.2.0",
+        "lint-staged": "^9.5.0",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.11",
+        "webpack-bundle-analyzer": "^3.6.1"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "src/**/*.{js,vue}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    }
 }
