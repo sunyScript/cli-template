@@ -7,8 +7,8 @@ const whiteList = [
 	'/login'
 ]
 
+//next内有地址时需NProgress.done()
 router.beforeEach((to, from, next) => {
-	//路由进度条 next内有路由地址时需添加NProgress.done()
 	NProgress.start()
 	if (whiteList.indexOf(to.path) !== -1) {
 		next()

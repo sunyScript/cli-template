@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name: "404"
+		name: "notFound"
 	}
 </script>
 
