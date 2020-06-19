@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "esnext",
+        "module": "esnext",
+        "lib": [
+            "dom",
+            "es6",
+            "esnext"
+        ],
+        "paths": {
+            "@/*": [
+                "examples/*"
+            ],
+            "@c/*": [
+                "src/*"
+            ]
+        },
+        "jsx": "preserve",
+        "importHelpers": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "."
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "examples/**/*.ts",
+        "examples/**/*.tsx",
+        "examples/**/*.vue",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "types/**/*.ts"
+    ]
+}

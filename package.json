@@ -1,0 +1,46 @@
+{
+    "name": "project",
+    "version": "0.0.1",
+    "private": false,
+    "license": "MIT",
+    "files": [
+        "lib"
+    ],
+    "main": "lib/index.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "tojs": "tsc --p tsconfig.pro.json"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "core-js": "^3.6.5",
+        "element-ui": "^2.13.2",
+        "jquery": "^3.5.1",
+        "qs": "^6.5.2",
+        "vue": "^2.6.11"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.33.0",
+        "@typescript-eslint/parser": "^2.33.0",
+        "@vue/cli-plugin-babel": "~4.4.0",
+        "@vue/cli-plugin-eslint": "~4.4.0",
+        "@vue/cli-plugin-router": "~4.4.0",
+        "@vue/cli-plugin-typescript": "~4.4.0",
+        "@vue/cli-plugin-vuex": "~4.4.0",
+        "@vue/cli-service": "~4.4.0",
+        "@vue/eslint-config-typescript": "^5.0.2",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "sass": "^1.26.5",
+        "sass-loader": "^8.0.2",
+        "typescript": "~3.9.3",
+        "vue-class-component": "^7.2.3",
+        "vue-property-decorator": "^8.4.2",
+        "vue-router": "^3.2.0",
+        "vue-template-compiler": "^2.6.11",
+        "vuex": "^3.4.0",
+        "vuex-module-decorators": "^0.17.0"
+    }
+}

@@ -1,0 +1,114 @@
+@import './reset-el';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #app {
+  min-height: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  background: #f5f6f9;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'MicrosoftYaHei', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #EFEFEF;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7D1DA;
+  border-radius: 3.5px;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+tr,
+th,
+td {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.BMap_cpyCtrl {
+  display: none;
+}
+
+.anchorBL {
+  display: none;
+}
+
+/** 懒加载样式*/
+img[lazy="loading"] {
+  display: inline-block;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+div[lazy=loading] {
+  display: inline-block;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.div-photo {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+* :focus {
+  outline: none;
+}

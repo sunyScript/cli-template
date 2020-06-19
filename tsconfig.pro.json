@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "esnext",
+        "module": "esnext",
+        "lib": [
+            "dom",
+            "es6",
+            "esnext"
+        ],
+        "jsx": "preserve",
+        "importHelpers": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "preserveSymlinks": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "declarationDir": "lib/types",
+        "declaration": true,
+        "baseUrl": ".",
+        "outDir": "lib"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "src/**/*"
+    ]
+}
