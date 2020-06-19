@@ -16,15 +16,22 @@ const routes = [
 	},
 	{
 		path: '*',
-		redirect: '/404'
+		redirect: '/404',
+		meta: {hidden: true}
 	}
 ]
 
 const router = new VueRouter({
+	routes,
 	mode: 'history',
 	base: process.env.VUE_APP_BASE,
-	scrollBehavior: () => ({y: 0}),
-	routes
+	scrollBehavior: (to, from, savedPosition) => {
+		if (savedPosition) {
+			return savedPosition
+		} else {
+			return {x: 0, y: 0}
+		}
+	}
 })
 
 export default router

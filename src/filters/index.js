@@ -1,4 +1,4 @@
-export function filterUserLazyImg(value) {
+export const filterUserLazyImg = (value) => {
 	return {
 		src: value,
 		error: require('@/assets/img/head.png'),
