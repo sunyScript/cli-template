@@ -1,5 +1,10 @@
-###cli-template 
+# project
 
+#### 命令
 ```
-vue-ts
+serve
+
+build
+
+lint
 ```

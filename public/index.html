@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>鲲鹏互联</title>
+    <style>
+        #lowVer,
+        #branch{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--IE-->
+    <div id="lowVer"></div>
+    <!--分支-->
+    <div id="branch"></div>
+    <!--app-->
+    <div id="app"></div>
+</body>
+<!--平台判断-->
+<script src="<%= BASE_URL %>js/platform.js"></script>
+</html>
