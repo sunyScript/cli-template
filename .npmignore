@@ -1,0 +1,14 @@
+/.idea
+/build
+/config
+/examples
+/node_modules
+/plugin
+/public
+/.babelrc
+/.env.*
+/.gitignore
+/vue.config.js
+/babel.config.js
+/package-lock.json
+/yarn.lock
