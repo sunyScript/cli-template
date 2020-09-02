@@ -6,15 +6,18 @@ import * as filters from '@/filters'
 import * as directives from '@/directives'
 import VueBus from 'vue-bus'
 import VueLazyload from 'vue-lazyload'
-import * as Sentry from '@sentry/browser'
-import * as Integrations from '@sentry/integrations'
 import ElementUI from 'element-ui'
+import Rx from 'rxjs'
 
-import 'element-ui/lib/theme-chalk/index.css'
+import '@/assets/icon/iconfont.css'
 import '@/assets/style/index.scss'
 import '@/permission'
 
-Vue.use(ElementUI)
+Vue.prototype.$rx = Rx
+
+Vue.use(ElementUI, {
+    size: 'medium'
+})
 
 Vue.use(VueBus)
 
@@ -32,26 +35,6 @@ Object.keys(filters).forEach(key => {
 Object.keys(directives).forEach(key => {
     Vue.directive(key, (directives as { [key: string]: DirectiveOptions })[key])
 })
-
-if (process.env.NODE_ENV !== "development") {
-    Sentry.init({
-        dsn: '',
-        integrations: [
-            new Integrations.Vue({
-                Vue,
-                attachProps: true
-            })
-        ],
-        beforeSend(event: any, hint: any) {
-            const error = hint.originalException
-            if (error && error.message && error.message.match(/of null|of undefind|endsWith|t is undefined/)){
-                return null
-            }else{
-                return event
-            }
-        }
-    })
-}
 
 Vue.config.productionTip = false
 

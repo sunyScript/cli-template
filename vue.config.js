@@ -1,17 +1,17 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
 //压缩文件
-const CompressionWebpackPlugin = require('compression-webpack-plugin');
-const productionGzipExtensions = ['js', 'css'];
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
+const productionGzipExtensions = ['js', 'css']
 //git版本号
-const GitRevisionPlugin = require('git-revision-webpack-plugin');
-const gitRevisionPlugin = new GitRevisionPlugin();
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
+const gitRevisionPlugin = new GitRevisionPlugin()
 //检查路径匹配
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 //sentry
-const SentryCliPlugin = require('@sentry/webpack-plugin');
+const SentryCliPlugin = require('@sentry/webpack-plugin')
 
-const resolve = dir => path.join(__dirname, dir);
+const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
 	outputDir: 'dist',
@@ -28,11 +28,11 @@ module.exports = {
 			warnings: true
 		},
 		proxy: {
-			'/api':{
+			[process.env.VUE_APP_BASE_API]: {
 				target: 'https://t.lobomeeting.com/api',
 				changeOrigin: true,
 				pathRewrite: {
-					'^/api': ''
+					['^' + process.env.VUE_APP_BASE_API]: ''
 				}
 			}
 		}
@@ -63,7 +63,7 @@ module.exports = {
 	},
 	configureWebpack: config => {
 		config.resolve.alias['@'] = resolve('src')
-		config.resolve.alias['@C'] = resolve('./src/components')
+		config.resolve.alias['@c'] = resolve('src/components')
 		config.plugins.push(
 			new webpack.ProvidePlugin({
 				jQuery: 'jquery',
@@ -72,7 +72,7 @@ module.exports = {
 			})
 		)
 
-		if (process.env.NODE_ENV != 'development'){
+		if (process.env.NODE_ENV !== 'development'){
 			config.devtool = 'source-map'
 			config.plugins.push(
 				new CompressionWebpackPlugin({
@@ -83,15 +83,15 @@ module.exports = {
 					minRatio: 0.8
 				})
 			)
-			config.plugins.push(
-				new SentryCliPlugin({
-					release: gitRevisionPlugin.branch(),
-					include: './dist',
-					ignore: ['node_modules'],
-					configFile: "sentry.properties",
-					urlPrefix: `~/${process.env.VUE_APP_BASE}/`
-				})
-			)
+			// config.plugins.push(
+			// 	new SentryCliPlugin({
+			// 		release: gitRevisionPlugin.branch(),
+			// 		include: './dist',
+			// 		ignore: ['node_modules'],
+			// 		configFile: "sentry.properties",
+			// 		urlPrefix: `~/${process.env.VUE_APP_BASE}/`
+			// 	})
+			// )
 		}else {
 			config.plugins.push(
 				new CaseSensitivePathsPlugin()

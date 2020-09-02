@@ -1,4 +1,11 @@
-el-input .el-input__inner {
+/* 改变主题色变量 */
+$--color-primary: #ff7c87;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-input .el-input__inner {
   padding: 0 8px;
 }
 

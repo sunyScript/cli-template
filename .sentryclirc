@@ -1,7 +1,7 @@
 [auth]
-token =
+token = d6db294f7d074368ac9166c6c19654349e59b11763714c84afdbb9f71654c326
 
 [defaults]
 url = https://sentry.lobomeeting.com
 org = sentry
-project =
+project = lbadmin

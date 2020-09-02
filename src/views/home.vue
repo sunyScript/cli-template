@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-    import hello from '@C/hello.vue'
+    import hello from '@c/hello.vue'
     import {Component, Vue} from 'vue-property-decorator'
 
     @Component({
